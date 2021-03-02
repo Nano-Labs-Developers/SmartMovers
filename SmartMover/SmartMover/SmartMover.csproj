@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{97C68E4D-A762-4256-8000-930A87B1295A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SmartMover</RootNamespace>
+    <AssemblyName>SmartMover</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SmartMovers.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Users\ASUS\Desktop\Bunifu UI WinForms 1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\About\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\About\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Admin\AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Admin\AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\DataBase\Customer\CustomerData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\DataBase\Customer\CustomerData.Designer.cs">
+      <DependentUpon>CustomerData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\DataBase\Product\ProductData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\DataBase\Product\ProductData.Designer.cs">
+      <DependentUpon>ProductData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\DataBase\Employee\EmployeeData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\DataBase\Employee\EmployeeData.Designer.cs">
+      <DependentUpon>EmployeeData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\DataBase\Job\JobData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\DataBase\Job\JobData.Designer.cs">
+      <DependentUpon>JobData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\DataBase\Load\LoadData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\DataBase\Load\LoadData.Designer.cs">
+      <DependentUpon>LoadData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\DataBase\Payment\Payment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\DataBase\Payment\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Home\StartHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Home\StartHome.Designer.cs">
+      <DependentUpon>StartHome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\About\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Admin\AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\DataBase\Customer\CustomerData.resx">
+      <DependentUpon>CustomerData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\DataBase\Product\ProductData.resx">
+      <DependentUpon>ProductData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\DataBase\Employee\EmployeeData.resx">
+      <DependentUpon>EmployeeData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\DataBase\Job\JobData.resx">
+      <DependentUpon>JobData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\DataBase\Load\LoadData.resx">
+      <DependentUpon>LoadData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\DataBase\Payment\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Home\StartHome.resx">
+      <DependentUpon>StartHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\Settings\" />
+    <Folder Include="src\UserHandel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_database_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_database_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_48px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_48px_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_database_48px_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_database_48px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SmartMovers.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
